@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Options Trading Analytics Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Get the latest options data you need to perform pre-trade analyses!
 
-## Available Scripts
+This app gives you near real-time data for finding trade opportunities. Check it out at the link below:
 
-In the project directory, you can run:
+[Go to demo](https://github.com/melissakw)
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This React app was born out of another financial analysis suite I was building. Since this is only a demo, I tried to keep the functionalities and UI very simple
 
-### `yarn test`
+You can enter any optionable stock symbol (ex. aapl) and look up the option chains on that stock.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There are two parts to this app:
+- This repo hosts the client application only
+- You can find the server application [here](https://github.com/melissakw)
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Important Notes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Option chain tables include contracts available within one year only
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- All information presented here is for educational purpose only and should not be considered error free or relied upon for investing decisions.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+Made with ❤️ by Melissa Wong

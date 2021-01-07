@@ -33,14 +33,16 @@ const StockProfile: FC<Prop> = ({ underlying }: Prop) => {
   const timeNumber: number | any = underlying.quoteTime;
   const percentChange: number | any = underlying.percentChange;
   const percentChangeFormatted = `${percentChange.toFixed(2)}%`;
-  const badgeVariant = percentChange > 0 ? 'success' : percentChange < 0 ? 'danger' : 'secondary';
-  const iconVariant = percentChange > 0 ? (
-    <ArrowDropUpIcon fontSize="large" />
-  ) : percentChange < 0 ? (
-    <ArrowDropDownIcon fontSize="large" />
-  ) : (
-    ''
-  );
+  const badgeVariant =
+    percentChange > 0 ? 'success' : percentChange < 0 ? 'danger' : 'secondary';
+  const iconVariant =
+    percentChange > 0 ? (
+      <ArrowDropUpIcon fontSize="large" />
+    ) : percentChange < 0 ? (
+      <ArrowDropDownIcon fontSize="large" />
+    ) : (
+      ''
+    );
 
   return (
     <Col>

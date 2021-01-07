@@ -20,8 +20,7 @@ const ErrorPage: FC = () => {
               <Row style={{ justifyContent: 'center' }}>
                 <Link to={{ pathname: '/' }}>
                   <Button variant="outline-light" type="submit">
-                    {' '}
-                    Back To Home{' '}
+                    Back To Home
                   </Button>
                 </Link>
               </Row>

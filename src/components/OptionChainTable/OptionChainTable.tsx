@@ -13,7 +13,7 @@ type Props = {
 
 const OptionChainTable: FC<Props> = ({
   putExpDateMap,
-  callExpDateMap
+  callExpDateMap,
 }: Props) => {
   const contractDatesArr = Object.keys(putExpDateMap);
 
@@ -126,7 +126,7 @@ const OptionChainTable: FC<Props> = ({
                                 <td
                                   style={{
                                     borderLeft: '1px solid #67737f',
-                                    borderRight: '1px solid #67737f'
+                                    borderRight: '1px solid #67737f',
                                   }}
                                 >
                                   {strike}

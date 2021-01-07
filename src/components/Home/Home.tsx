@@ -28,7 +28,7 @@ const Home: FC = () => {
               find the best opportunity.
             </HomeSubText>
             <HomeSmallSubText>
-              Disclaimer: All inforamtion presented is for educational purposes
+              Disclaimer: All information presented is for educational purposes
               only and should not be considered error free or relied upon for
               investing decisions.
             </HomeSmallSubText>

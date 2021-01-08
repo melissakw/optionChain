@@ -31,7 +31,7 @@ interface Response {
 const OptionChains: FC<
   RouteComponentProps<Record<string, undefined>, StaticContext, LocationState>
 > = (props) => {
-  const baseUrl = 'http://localhost:3002/tdAPI';
+  const baseUrl = `http://${process.env.REACT_APP_IPV4}`;
   const query: string | undefined = props.location.state?.userQuery || '';
 
   const [searchValidate, setSearchValidate] = useState<boolean>(false);

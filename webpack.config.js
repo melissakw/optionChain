@@ -1,6 +1,8 @@
+const dotenv = require('dotenv').config({wrpath: __dirname + '/.env'});
 const path = require('path');
 const HWP = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { DefinePlugin } = require('webpack');
 module.exports = {
 	resolve: {
 		modules: [path.resolve(__dirname, '/src'), 'node_modules/'],
@@ -47,6 +49,10 @@ module.exports = {
 		new HWP(
 			{template: path.join(__dirname, '/public/index.html')}
 		),
-		new BundleAnalyzerPlugin()
+		new BundleAnalyzerPlugin(),
+		new DefinePlugin({
+			"process.env": JSON.stringify(dotenv.parsed)
+		}
+		)
 	]
 }

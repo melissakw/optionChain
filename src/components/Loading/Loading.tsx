@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Spinner } from 'react-bootstrap';
+import Spinner from 'react-bootstrap/Spinner';
 import { StyledRow } from './Loading.elements';
 
 const Loading: FC = () => {

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Col } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
 import { StyledRow, ErrorText } from './FetchError.elements';
 
 const FetchError: FC = () => {

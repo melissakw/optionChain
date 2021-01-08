@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
 
 export const StyledRow = styled(Row)`
   height: 50vh;

@@ -1,21 +1,22 @@
-import React, { FC } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import React, { FC, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HomePage from './routes/HomePage';
-import OptionChains from './routes/OptionChains';
-import ErrorPage from './routes/ErrorPage';
+import { PageLoading } from './components';
+
+const LazyHomePage = React.lazy(() => import('./routes/HomePage'));
+const LazyOptionChains = React.lazy(() => import('./routes/OptionChains'));
+const LazyErrorPage = React.lazy(() => import('./routes/ErrorPage'));
 
 const App: FC = () => {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <Suspense fallback={<PageLoading />}>
       <Router>
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/optionchain" component={OptionChains} />
-          <Route component={ErrorPage} />
+          <Route exact path="/" component={LazyHomePage} />
+          <Route exact path="/optionchain" component={LazyOptionChains} />
+          <Route component={LazyErrorPage} />
         </Switch>
       </Router>
-    </AnimatePresence>
+    </Suspense>
   );
 };
 

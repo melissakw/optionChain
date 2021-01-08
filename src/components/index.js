@@ -7,3 +7,4 @@ export { default as ScrollToTopButton } from './ScrollToTopButton/ScrollToTopBut
 export { default as FetchError } from './FetchError/FetchError';
 export { default as PageNotFoundError } from './PageNotFoundError/PageNotFoundError';
 export { default as StockProfile } from './StockProfile/StockProfile';
+export { default as PageLoading } from './PageLoading/PageLoading';

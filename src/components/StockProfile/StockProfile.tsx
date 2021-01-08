@@ -1,9 +1,8 @@
-/* eslint-disable no-console */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from 'react';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import { Col, Row } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import {
   StockSymbolRow,
   StockSymbol,
@@ -20,7 +19,6 @@ type Prop = {
 };
 
 const StockProfile: FC<Prop> = ({ underlying }: Prop) => {
-  console.log('STOCK PROFILE: ', underlying);
   const {
     change,
     close,

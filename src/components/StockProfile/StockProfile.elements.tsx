@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Badge, Row } from 'react-bootstrap';
+import Badge from 'react-bootstrap/Badge';
+import Row from 'react-bootstrap/Row';
 
 export const StockSymbolRow = styled(Row)`
   margin-top: 60;

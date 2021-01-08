@@ -1,12 +1,17 @@
 import styled from 'styled-components';
-import { Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
 import abstract from '../../images/abstract.png';
 
 export const Background = styled.div`
   background-color: #000000;
   background: url(${abstract});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
   min-width: 100%;
   min-height: 100%;
+  height: 100%;
   position: fixed;
 `;
 

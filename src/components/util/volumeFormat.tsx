@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 const volumeFormat = (volume: any): any | number | string => {
   return volume >= 1.0e9
     ? `${(volume / 1.0e9).toFixed(2)}B`

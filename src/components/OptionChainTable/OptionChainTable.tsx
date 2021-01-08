@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/ban-types */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-return-assign */
-/* eslint-disable no-console */
 import React, { useState, FC } from 'react';
-import { Col, Row, Table, Button, Collapse } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import Collapse from 'react-bootstrap/Collapse';
+
 import { truncateDigits, fillDecimals } from './formatTableHelpers';
 
 type Props = {

@@ -1,9 +1,10 @@
-/* eslint-disable arrow-body-style */
-/* eslint-disable react/jsx-boolean-value */
-/* eslint-disable no-console */
 import React, { useState, FC } from 'react';
 import { Link } from 'react-router-dom';
-import { Col, Row, Form, FormControl, Button } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 import { BsPrefixProps } from 'react-bootstrap/esm/helpers';
 
 interface IFormControl extends BsPrefixProps {
@@ -16,9 +17,6 @@ type Props = {
 
 const Search: FC<Props> = ({ isLoading }: Props) => {
   const [query, setQuery] = useState('');
-  console.log('SEARCH QUERY:', query);
-
-  // const handler = () => new Promise<void>((resolve) => setTimeout(() => resolve(), 3000));
 
   return (
     <Form>

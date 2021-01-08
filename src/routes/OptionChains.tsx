@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-console */
 import React, { useState, useEffect, FC } from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 import { StaticContext } from 'react-router';
 import { RouteComponentProps } from 'react-router-dom';
 import axios, { AxiosResponse } from 'axios';
@@ -81,13 +79,9 @@ const OptionChains: FC<
         fetchData();
       }
     } else {
-      console.log('RIGHT!!!');
       setSearchValidate(false);
     }
   }, [query]);
-
-  console.log(`isLoading=${isLoading}, query=${query}, iserror=${isError}, 
-  searchValidate=${searchValidate}, fetchSucces${fetchSuccess}`);
 
   return (
     <>

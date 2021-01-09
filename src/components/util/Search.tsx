@@ -1,4 +1,4 @@
-import React, { useState, FC } from 'react';
+import React, { useEffect, useState, FC } from 'react';
 import { Link } from 'react-router-dom';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -16,7 +16,14 @@ type Props = {
 };
 
 const Search: FC<Props> = ({ isLoading }: Props) => {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState<string>('');
+  const [clicked, setClicked] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!isLoading || clicked) {
+      setQuery('');
+    }
+  }, [isLoading, clicked]);
 
   return (
     <Form>
@@ -59,6 +66,7 @@ const Search: FC<Props> = ({ isLoading }: Props) => {
                 role={'button'}
                 variant={'outline-light'}
                 style={{ marginBottom: '20px' }}
+                onClick={() => setClicked(!clicked)}
               >
                 Search
               </Button>

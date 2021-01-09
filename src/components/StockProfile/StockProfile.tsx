@@ -19,15 +19,10 @@ type Prop = {
 };
 
 const StockProfile: FC<Prop> = ({ underlying }: Prop) => {
-  const {
-    change,
-    close,
-    symbol,
-    description,
-    exchangeName,
-    totalVolume,
-  } = underlying;
+  const { symbol, description, exchangeName, totalVolume } = underlying;
 
+  const last: number | any = underlying.last;
+  const change: number | any = underlying.change;
   const timeNumber: number | any = underlying.quoteTime;
   const percentChange: number | any = underlying.percentChange;
   const percentChangeFormatted = `${percentChange.toFixed(2)}%`;
@@ -53,13 +48,13 @@ const StockProfile: FC<Prop> = ({ underlying }: Prop) => {
       </Row>
 
       <Row style={{ alignItems: 'center' }}>
-        <LastPrice>{close}</LastPrice>
+        <LastPrice>{last.toFixed(2)}</LastPrice>
         <PriceChangeP>
           <PriceChangeBadge variant={badgeVariant}>
             {percentChangeFormatted}
           </PriceChangeBadge>
           {iconVariant}
-          {change}
+          {change.toFixed(2)}
         </PriceChangeP>
       </Row>
 

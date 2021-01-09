@@ -34,10 +34,10 @@ const OptionChains: FC<
   const baseUrl = `http://${process.env.REACT_APP_IPV4}`;
   const query: string | undefined = props.location.state?.userQuery || '';
 
-  const [searchValidate, setSearchValidate] = useState<boolean>(false);
+  const [searchValidate, setSearchValidate] = useState<string>('preValidate');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
-  const [fetchSuccess, setFetchSuccess] = useState<boolean>(false);
+  const [fetchSuccess, setFetchSuccess] = useState<string>('preFetch');
   const [underlying, setUnderlying] = useState<Record<string, unknown>>();
   const [putExpDateMap, setPutExpDateMap] = useState<Record<string, unknown>>();
   const [callExpDateMap, setCallExpDateMap] = useState<
@@ -56,9 +56,9 @@ const OptionChains: FC<
       const res: Response = axiosRes.data;
 
       if (res.status === 'FAILED') {
-        setFetchSuccess(false);
+        setFetchSuccess('failed');
       } else {
-        setFetchSuccess(true);
+        setFetchSuccess('success');
       }
 
       setUnderlying(res.underlying);
@@ -74,12 +74,12 @@ const OptionChains: FC<
 
   useEffect(() => {
     if (query.match(/([A-Za-z]\.?){1,5}/)) {
-      setSearchValidate(true);
+      setSearchValidate('validated');
       if (!isLoading) {
         fetchData();
       }
     } else {
-      setSearchValidate(false);
+      setSearchValidate('invalid');
     }
   }, [query]);
 
@@ -100,9 +100,13 @@ const OptionChains: FC<
             <RefreshButton fetchData={fetchData} />
           </Row>
 
-          {isLoading && query ? (
+          {(isLoading && query) ||
+          (fetchSuccess === 'preFetch' && searchValidate === 'preValidate') ? (
             <Loading />
-          ) : isError || !searchValidate || !fetchSuccess ? (
+          ) : isError ||
+            searchValidate === 'invalid' ||
+            fetchSuccess === 'failed' ? (
+            // eslint-disable-next-line prettier/prettier
             <FetchError />
           ) : (
             <>

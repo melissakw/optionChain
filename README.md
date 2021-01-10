@@ -8,6 +8,8 @@ This app gives you near real-time data for finding trade opportunities. Check it
 
 [Go to demo](http://52.39.121.151/)
 
+*** Frugality is a virtue. I've set a timer on the EC2 instance so this demo is only available 8:00am EST - 8:00pm EST
+
 ## About
 
 This React app was born out of another financial analysis suite I was building. Since this is only a demo, I tried to keep the functionalities and UI fairly simple

@@ -6,9 +6,10 @@ Get the latest options data you need to perform pre-trade analyses!
 
 This app gives you near real-time data for finding trade opportunities. Check it out at the link below:
 
-[Go to demo](http://52.39.121.151/)
 
-*** Frugality is a virtue. I've set a timer on the EC2 instance so this demo is only available 8:00am EST - 8:00pm EST
+[**Go to demo**](http://52.39.121.151/)
+
+*** Frugality is a virtue. I've set a timer on the EC2 instance so this demo is only available *8:00am EST - 8:00pm EST*
 
 ## About
 

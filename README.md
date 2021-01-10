@@ -25,9 +25,9 @@ For this simple demo, I decided to create a nice and easy way to look up any opt
 
 **Simple UI:**
 
-I used a good mix of Bootstrap, Material UI icons, Styled Components, and CSS for the UI. Every project is different and I like to keep things simple when it comes to projects that don't have very custom requirements. Bootstrap is a good starting point for a simple input field, search button, and table like the ones shown in this demo. I usually start with Bootstrap as much as possible and refactor to Styled Components over time or as requirements change.
+I used a good mix of Bootstrap, Material UI icons, Styled Components, and CSS for the UI for this demo. Every project is different and I like to keep things simple when it comes to projects that don't have very custom requirements.
 
-This approach seems to save some time upfront and help the projects get going quickly. And it's rather painless to refactor as the ever-changing requirements present themselves.
+With that said, I'm always open to different approaches with Sass, Material Design, etc. Bootstrap is often a good starting point for a simple input field, search button, and table like the ones shown in this demo. Here I started with Bootstrap as much as possible and refactored to Styled Components over time or as needed. In some circumstances, this approach could save some time upfront and get the project going quickly.
 
 **Robust functionalities:**
 

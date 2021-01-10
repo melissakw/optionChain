@@ -2,9 +2,11 @@
 
 Get the latest options data you need to perform pre-trade analyses!
 
+<img src="https://i.ibb.co/128Cnj6/options-project-gif.gif" width="800" />
+
 This app gives you near real-time data for finding trade opportunities. Check it out at the link below:
 
-[Go to demo](https://github.com/melissakw)
+[Go to demo](http://52.39.121.151/)
 
 ## About
 
@@ -15,7 +17,7 @@ You can enter any optionable stock symbol (ex. aapl) and look up the option chai
 There are two parts to this app:
 
 - This repo hosts the client application only
-- You can find the server application [here](https://github.com/melissakw)
+- You can find the server application [here](https://github.com/melissakw/optionsServer)
 
 ## Deisgn Notes
 
@@ -63,7 +65,7 @@ Webpack was used to create the bundle. You can find examples of lazy loading in 
 
 **Deployment:**
 
-For deployment, I went with AWS EC2. This repo is for the client project only. To keep the API keys secure, a separate REST API endpoint was created with Express.js in Node.js. The backend is also deployed to the same EC2 instance with the correct security group setup. That way only this client app is exposed to the public. 
+For deployment, I went with AWS EC2. This repo is for the client project only. To keep the API keys secure, a separate REST API endpoint was created with Express.js in Node.js. The backend is also deployed to the same EC2 instance with the correct security group setup. That way only this client app is exposed to the public. Finally, Nginx was used as the reverse proxy to serve both the front end and back end Node applications.
 
 As a side note, you will find the use of ESLint, Prettier, Husky, and other common libraries in the React toolchain. Test cases are omitted here. I typically use Jest/ Enzyme/ React Testing Library (RNTL for Native projects).
 
